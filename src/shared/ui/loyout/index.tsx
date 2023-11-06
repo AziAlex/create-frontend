@@ -2,9 +2,8 @@ import styled from 'styled-components'
 import { FC, PropsWithChildren } from 'react'
 
 const SLayout = styled.div`
-  background-image: url(/public/pages/main/body-bg.jpg);
+  background-image: url("/pages/main/body-bg.jpg");
   background-size: cover;
-  //background-position: top;
   min-height: 100vh;
 `
 
