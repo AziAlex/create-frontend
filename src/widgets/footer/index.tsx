@@ -1,22 +1,28 @@
-import { SFooter, SLi, SText, SUl } from './style.ts'
+import { SFooter, SFooterListNav, SFooterListSocialLinks } from './style.ts'
+import RgbTitle from '../../shared/ui/rgb-title'
+import { FOOTER_LINKS, FOOTER_SOCIAL_LINKS } from './lib/constants.ts'
+import Icon from '../../shared/svg'
 
 const Index = () => {
   return (
     <SFooter>
-      <SUl>
-        <SLi>
-          <SText href="/">all portfolio</SText>
-        </SLi>
-        <SLi>
-          <SText href="/">news</SText>
-        </SLi>
-        <SLi>
-          <SText href="/">about</SText>
-        </SLi>
-        <SLi>
-          <SText href="/">contact</SText>
-        </SLi>
-      </SUl>
+      <RgbTitle title="CREATE" />
+      <SFooterListNav>
+        {FOOTER_LINKS.map(({ title, href }, index) => (
+          <li key={index}>
+            <a href={href}>{title}</a>
+          </li>
+        ))}
+      </SFooterListNav>
+      <SFooterListSocialLinks>
+        {FOOTER_SOCIAL_LINKS.map(({ name, href }, index) => (
+          <li key={index}>
+            <a href={href}>
+              <Icon name={name} />
+            </a>
+          </li>
+        ))}
+      </SFooterListSocialLinks>
     </SFooter>
   )
 }

@@ -1,12 +1,12 @@
-import MainPades from '../pages/main'
-import '../app/styles/index.css'
+import MainPages from '../pages/main'
+import './styles/index.css'
 
-function Index() {
+function App() {
   return (
     <>
-      <MainPades />
+      <MainPages />
     </>
   )
 }
 
-export default Index
+export default App
