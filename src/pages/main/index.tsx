@@ -2,7 +2,8 @@ import Header from '../../widgets/header'
 import Layout from '../../shared/ui/loyout'
 import Footer from '../../widgets/footer'
 
-const MainPades = () => {
+
+const MainPages = () => {
   return (
     <Layout>
       <Header />
@@ -11,4 +12,4 @@ const MainPades = () => {
   )
 }
 
-export default MainPades
+export default MainPages
